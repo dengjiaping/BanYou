@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.quanliren.quan_one.activity"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/now_position_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:background="#FFFFFF"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:text="A"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:id="@+id/userinfo"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/now_position_txt"
+        android:background="@drawable/title_btn"
+        android:gravity="center_vertical" >
+
+        <com.quanliren.quan_one.custom.RoundAngleImageView
+            android:id="@+id/userlogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/userlogo"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@id/userlogo"
+            android:singleLine="true"
+            android:text="申兵兵"
+            android:textColor="@color/title"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignBottom="@id/userlogo"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/userlogo"
+            android:background="@drawable/girl_icon"
+            android:gravity="center_vertical"
+            android:text="12"
+            android:textColor="@color/white"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/manage_ll"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/userinfo"
+        android:background="@color/manage_member_bg"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/drivers_height"
+            android:background="@drawable/seting_drivers" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/input_one_btn"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="添加管理员"
+                android:textColor="@color/manage_member_text"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/delete"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/input_one_btn"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="删除该成员"
+                android:textColor="@color/manage_member_text"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/drivers_height"
+        android:layout_below="@id/manage_ll"
+        android:background="@drawable/seting_drivers" />
+
+</RelativeLayout>

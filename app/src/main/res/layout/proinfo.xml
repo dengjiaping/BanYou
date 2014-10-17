@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        layout="@layout/custom_back_actionbar" />
+
+    <com.quanliren.quan_one.custom.ProgressWebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:visibility="gone"
+        android:background="@color/actionbar" >
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/title_back_icon" />
+
+        <ImageView
+            android:id="@+id/go"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_toRightOf="@id/back"
+            android:scaleType="centerInside"
+            android:src="@drawable/title_go_icon" />
+
+        <ImageView
+            android:id="@+id/refere"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_refere_icon" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btomLL"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="@color/buy_vip_normal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/use"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/buy_vip_selector"
+            android:text="使用"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+        <View 
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"/>
+        <Button
+            android:id="@+id/exchange"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/buy_vip_selector"
+            android:text="换现金"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

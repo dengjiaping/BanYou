@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+    <include
+        android:id="@+id/top_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        layout="@layout/custom_menu_actionbar" />
+
+  <!--   <ImageView 
+        android:id="@+id/ad_img"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_below="@id/top_title"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"/> -->
+    
+	<FrameLayout 
+	    android:layout_below="@id/top_title"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:id="@+id/content"></FrameLayout>
+	
+	<include
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/popbg" />
+</RelativeLayout>

@@ -1,0 +1,24 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 14 theme customizations can go here. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+         <!-- <item name="android:windowAnimationStyle">@style/Animation.Activity.Translucent.Style</item> -->
+    </style>
+  
+    <style name="Animation.Activity.Translucent.Style" parent="@android:style/Animation.Translucent">  
+        <item name="android:windowEnterAnimation">@anim/slide_left_in</item>  
+        <item name="android:windowExitAnimation">@anim/slide_right_out</item>  
+    </style>  
+    
+    <style name="AppBaseThemeNoAnimation" parent="android:Theme.Holo.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

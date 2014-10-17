@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.quanliren.quan_one.activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        layout="@layout/custom_back_actionbar" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="80dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp" >
+
+                    <com.quanliren.quan_one.custom.RoundAngleImageView
+                        android:id="@+id/grouplogo"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        app:roundHeight="5dp"
+                        app:roundWidth="5dp" />
+
+                    <TextView
+                        android:id="@+id/groupname"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25dp"
+                        android:layout_alignTop="@id/grouplogo"
+                        android:layout_toRightOf="@id/grouplogo"
+                        android:gravity="top"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/title_press_txt"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/groupid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/groupname"
+                        android:layout_toRightOf="@id/grouplogo"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/title"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="群简介："
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/groupdesc"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="暂无"
+                        android:textColor="@color/manage_member_text" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/drivers_height"
+                    android:background="@drawable/seting_drivers" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:text="创建者："
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <com.quanliren.quan_one.custom.RoundAngleImageView
+                        android:id="@+id/manager_userlogo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="4dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        app:roundHeight="5dp"
+                        app:roundWidth="5dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/drivers_height"
+                    android:background="@drawable/seting_drivers" />
+
+                <RelativeLayout
+                    android:id="@+id/managers_rl"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/managers_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="center_vertical"
+                        android:text="管理人员　("
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/managers_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_toRightOf="@id/managers_txt"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="2dp"
+                        android:paddingRight="2dp"
+                        android:textColor="@color/title_press_txt"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_toRightOf="@id/managers_num"
+                        android:gravity="center_vertical"
+                        android:text=")"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/managers_logo_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/managers_txt"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal" >
+
+                        <com.quanliren.quan_one.custom.RoundAngleImageView
+                            android:id="@+id/managers_userlogo1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            app:roundHeight="5dp"
+                            app:roundWidth="5dp" />
+
+                        <com.quanliren.quan_one.custom.RoundAngleImageView
+                            android:id="@+id/managers_userlogo2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="5dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            app:roundHeight="5dp"
+                            app:roundWidth="5dp" />
+
+                        <com.quanliren.quan_one.custom.RoundAngleImageView
+                            android:id="@+id/managers_userlogo3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="5dp"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            app:roundHeight="5dp"
+                            app:roundWidth="5dp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/drivers_height"
+                        android:layout_below="@id/managers_logo_ll"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/seting_drivers" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/group_memeber_list_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/title_btn"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center_vertical"
+                        android:text="群成员　"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/title_press_txt"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/maxnum"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/caret" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/drivers_height"
+                    android:background="@drawable/seting_drivers" />
+
+                <LinearLayout
+                    android:id="@+id/group_pic_list_ll"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/title_btn"
+                    android:clickable="true"
+                    android:orientation="horizontal"
+                    android:padding="10dp" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="群相册　"
+                        android:textColor="@color/title"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/caret" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/drivers_height"
+                    android:background="@drawable/seting_drivers" />
+            </LinearLayout>
+        </ScrollView>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bottom_bg" >
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/tiao" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/gourp_bar_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bottom_btn"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="圈吧"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/group_memeber_list_txt"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bottom_btn"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="成员"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

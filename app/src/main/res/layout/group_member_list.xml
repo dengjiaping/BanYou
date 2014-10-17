@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        layout="@layout/custom_back_actionbar" />
+
+    <EditText
+        android:id="@+id/edittext"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/search_bg"
+        android:gravity="center_vertical"
+        android:hint="搜索成员"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.quanliren.quan_one.custom.PinnedHeaderListView
+            android:id="@+id/member_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:drawSelectorOnTop="false"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false"
+            android:listSelector="#00000000"
+            android:scrollbars="vertical" >
+        </com.quanliren.quan_one.custom.PinnedHeaderListView>
+
+        <com.quanliren.quan_one.custom.BladeView
+            android:id="@+id/letterlistview"
+            android:layout_width="30dip"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:background="#00000000" />
+    </RelativeLayout>
+
+</LinearLayout>

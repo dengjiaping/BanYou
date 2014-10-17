@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.quanliren.quan_one.activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_bg"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableRow
+            android:id="@+id/love_ll"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="爱好："
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/love"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="无"
+                    android:textColor="@color/signature"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/work_ll"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="职业："
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/work"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/signature"
+                    android:text="无"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/place_ll"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="常出没："
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="无"
+                    android:textColor="@color/signature"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人签名："
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/signature"
+                    android:layout_width="match_parent"
+                    android:text="无"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/signature"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/white" />
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow android:padding="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个人动态："
+                android:textColor="@color/darkgray"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/dongtai_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="无"
+                
+                android:visibility="gone" 
+                android:textColor="@color/signature"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/personal_ll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/message_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.quanliren.quan_one.custom.RoundAngleImageView
+                    android:id="@+id/dyimg"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    app:roundHeight="5dp"
+                    app:roundWidth="5dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+
+                    <com.quanliren.quan_one.custom.emoji.EmoticonsTextView
+                        android:id="@+id/dycontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:lineSpacingExtra="4dp"
+                        android:singleLine="true"
+                        android:textColor="@color/username"
+                        android:textSize="12sp" />
+
+
+                        <TextView
+                            android:id="@+id/dytime"
+                            android:layout_width="fill_parent"
+                            android:layout_height="25dp"
+                            android:gravity="bottom"
+                            android:textColor="@color/signature"
+                            android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="center"
+                    android:src="@drawable/caret" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+	
+</LinearLayout>

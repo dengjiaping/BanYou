@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.quanliren.quan_one.activity"
+    android:layout_width="fill_parent"
+    android:layout_height="56dp"
+    android:padding="0dp"
+    android:background="@drawable/menu_btm_selector"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/click_item"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp" >
+
+        <com.quanliren.quan_one.custom.RoundAngleImageView
+            android:id="@+id/userlogo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp" />
+
+        <TextView
+            android:id="@+id/messagecount"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:background="@drawable/list_newmessage"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:singleLine="true"
+            android:layout_toRightOf="@id/userlogo"
+            android:text="群消息列表"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+</LinearLayout>
