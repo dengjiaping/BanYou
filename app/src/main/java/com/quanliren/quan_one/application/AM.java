@@ -1,16 +1,19 @@
 package com.quanliren.quan_one.application;
 
+import android.app.Activity;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
-
-import android.app.Activity;
 
 public class AM {
 	private static Stack<Activity> activityStack;
 	private static AM instance;
 
 	private AM() {
+        if (activityStack == null) {
+            activityStack = new Stack<Activity>();
+        }
 	}
 
 	public static AM getActivityManager() {
